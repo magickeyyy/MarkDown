@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>dog</p>
+    <p>cat</p>
+    <p>pig</p>
+    <script src="./d3/d3.js"></script>
+    <script>
+        var p = d3.selectAll('p')
+        var arr = [1,3,5,7,9];
+        p.data(arr).text((v, i) => {
+            return v
+        })
+    </script>
+</body>
+</html>
