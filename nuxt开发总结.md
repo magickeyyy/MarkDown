@@ -31,7 +31,7 @@ async nuxtServerInit({ commit}, {app: { router }, store, req, res, query, params
 3. asyncData是在页面渲染前一步获取数据并填充data，注意：会被data中的同名属性覆盖。fetch是在页面渲染前异步操作store。注意：都只在页面使用。  
 4. 然后就开始预渲染，每次切换路由会进入middleware再循环。以上步骤都在服务端执行。  
 
-5. 之后就是vue生命周期：beforeCreate等等。beforeCreate和created中仍然不能使用window对象，虽然process.client===true&&process.server===false。后面的钩子才是完全在客户端执行。  
+5. 之后就是vue生命周期：beforeCreate等等。beforeCreate和created中仍然不能使用window对象，虽然process.client\=\=\=true&&process.server\=\=\=false。后面的钩子才是完全在客户端执行。  
 
 ### 1.2  Vue生命周期  
 
