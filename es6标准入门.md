@@ -81,4 +81,37 @@ super指向父类（不是实例哦），constuctor默认返回的是实例，�
 
 ## 29. 最新提案  
 
-## 30. Decorator  
+## 30. Decorator
+
+## 作用域  
+
+### 全局作用域  
+
+在函数、模块外申明的变量全局都可以访问。
+
+``` js  
+// inde.html
+// 重点在type，如果是module，这段脚本就是es6module
+...
+<script type="text/javascript" src="./index.js"></script>
+...
+// index.js
+var a=12; // 全局作用域
+b=13; // 使用效果如上，他实际上是挂到window上，可以被删除，但是a却不能
+```
+
+### 函数/局部作用域  
+
+在函数内申明的变量只能在函数内访问（可以访问上一级变量；module也是函数）
+
+### 动态作用域  
+
+this  
+
+### 块状作用域  
+
+{}中的代码；let、const
+
+## 遍历  
+
+for...in...针对object（array是object，arr.name=122,也会被遍历）,for针对array，for...of...都可以  
