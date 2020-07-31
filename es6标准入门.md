@@ -63,7 +63,8 @@ b = 31;  // a依然是{ age: 30 }
 &emsp;&emsp;super表示父类的构造函数，但是返回的是子类  
 &emsp;&emsp;类中无this，只有实例才有
 
-super指向父类（不是实例哦），constuctor默认返回的是实例，也可手动返回其他对象
+super指向父类（不是实例哦），constuctor默认返回的是实例，也可手动返回其他对象  
+如果父类constructor有参数，子类必须调用super，并且传入指定参数：既子类的constructor的参数必须包括父类constructor的参数，且子类必须调用super传入这些参数  
 
 ## 22. class的继承  
 
